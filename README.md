@@ -2,7 +2,9 @@
 vim: lexc, twolc, xfst, vislcg3 (both rules and stream formats)
 
 These plugins are based on the following repositories with some refactoring and additions:
-[dotfiles](https://github.com/jonorthwash/dotfiles) and [vim-finitestatemorphology](https://github.com/apertium/vim-finitestatemorphology)
+[dotfiles](https://github.com/jonorthwash/dotfiles), 
+[vim-finitestatemorphology](https://github.com/apertium/vim-finitestatemorphology) and
+[apertium-recursive](https://github.com/apertium/apertium-recursive)
 
 This repository contains rudimentary syntax files for colourful higlighting of
 things and stuff in vim for some legacy file formats used in natural language
