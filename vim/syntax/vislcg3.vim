@@ -29,12 +29,12 @@ syn match   vislcg3Operators    /[*+0-9-]\+/
 "syn match   vislcg3Id           /\i*/
 syn match   vislcg3Form         /"<[^>]*>"/ contained
 syn match   vislcg3Word         /"[^"@]"/ contained
-syn match   vislcg3SynTags      /@\w\+/
+syn match   vislcg3SynTags      /@[<>A-Za-z_-]\+/
 syn region  vislcg3Bracketed    start=/(/ end=/)/ contains=vislcg3Form,vislcg3Word,vislcg3Id,vislcg3Operators,vislcg3SynTags
 
 " Comments
 syn keyword vislcg3CommentNotes TODO FIXME CHECK NOTE BUG XXX contained 
-syn match   vislcg3CommentInfos /@\w\+/ contained
+syn match   vislcg3CommentInfos /@[<>A-Za-z_-]\+/ contained
 syn match   vislcg3Comment      /#.*/ contains=vislcg3CommentNotes,vislcg3CommentInfos
 
 " Highlights
