@@ -31,7 +31,7 @@ syn match   vislcg3Form         /"<[^>]*>"/ contained
 syn match   vislcg3Word         /"[^"@]"/ contained
 syn match   vislcg3Regex        /[ (]\/\zs[^\/]\+\ze\/[ri]\+/ contained
 syn match   vislcg3SynTags      /@[<>A-Za-z_-]\+/
-syn region  vislcg3Bracketed    start=/(/ end=/)/ contains=vislcg3Form,vislcg3Word,vislcg3Regex,vislcg3Id,vislcg3Operators,vislcg3SynTags
+syn region  vislcg3Bracketed    start=/(/ end=/)/ contains=vislcg3KeyWords,vislcg3Form,vislcg3Word,vislcg3Regex,vislcg3Id,vislcg3Operators,vislcg3SynTags
 
 " Comments
 syn keyword vislcg3CommentNotes TODO FIXME CHECK NOTE BUG XXX contained 
