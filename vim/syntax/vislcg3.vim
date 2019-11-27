@@ -30,7 +30,7 @@ syn match   vislcg3Word         /"[^"@]"/
 " some fragments
 "syn match   vislcg3Id           /\i*/
 syn match   vislcg3Regex        /[ (]\/\zs[^\/]\+\ze\/[ri]\+/ contained
-syn match   vislcg3SynTags      /@[<>A-Za-z_-]\+/
+syn match   vislcg3SynTags      /@[<>A-Za-z_+-]\+/
 syn region  vislcg3Bracketed    start=/(/ end=/)/ contains=vislcg3KeyWords,vislcg3Form,vislcg3Word,vislcg3Regex,vislcg3Id,vislcg3Operators,vislcg3SynTags
 
 " Comments
