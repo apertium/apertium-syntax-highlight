@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE language SYSTEM "language.dtd">
+<language name="Apertium Stream" section="Other" extensions=".apertium">
+  <highlighting>
+    <list name="somename">
+      <item> class </item>
+      <item> const </item>
+    </list>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text" >
+        <keyword attribute="Keyword" context="#stay" String="somename" />
+        <DetectChar attribute="Tag" context="tag" char="&lt;"/>
+        <DetectChar attribute="Formatting" context="formatting" char="["/>
+      </context>
+      <context attribute="Tag" lineEndContext="#pop" name="tag">
+        <DetectChar attribute="Escape" context="escape" char="\"/>
+        <DetectChar attribute="Tag" context="#pop" char=">"/>
+      </context>
+      <context attribute="Formatting" lineEndContext="#stay" name="formatting">
+        <DetectChar attribute="Escape" context="escape" char="\"/>
+        <DetectChar attribute="Formatting" context="#pop" char="]"/>
+      </context>
+      <context attribute="Escape" lineEndContext="#pop" name="escape">
+        <RegExpr String="." attribute="Escape" context="#pop"/>
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" />
+      <itemData name="Keyword" defStyleNum="dsKeyword" />
+      <itemData name="String" defStyleNum="dsString" />
+      <itemData name="Tag" defStyleNum="dsString"/>
+      <itemData name="Formatting" defStyleNum="dsComment"/>
+      <itemData name="Escape" defStyleNum="dsChar"/>
+    </itemDatas>
+  </highlighting>
+</language>
