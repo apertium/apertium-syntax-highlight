@@ -1,0 +1,10 @@
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+# Some formats have meaningful trailing whitespaces, especially mail or mime!
+#trim_trailing_whitespace = true
+
+[*.{dix,t1x,t2x,t3x,lrx,rlx}]
+indent_size = 2
+trim_trailing_whitespace = true
