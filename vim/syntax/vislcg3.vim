@@ -22,15 +22,16 @@ syn case match
 
 " Internal keywords
 syn keyword vislcg3KeyWords     ADD ADDCOHORT ADDRELATION ADDRELATIONS AFTER-SECTIONS ALL AND APPEND BARRIER BEFORE-SECTIONS CBARRIER CONSTRAINTS COPY CORRECTIONS DELIMIT DELIMITERS END EXTERNAL IF IFF INCLUDE LINK LIST MAP MAPPINGS MAPPING-PREFIX MOVE NEGATE NONE NOT NULL-SECTION OPTIONS PREFERRED-TARGETS REMCOHORT REMOVE REMRELATION REMRELATIONS REPLACE SECTION SELECT SET SETCHILD SETPARENT SETRELATION SETRELATIONS SETS SOFT-DELIMITERS STATIC-SETS STRICT-TAGS SUBSTITUTE SWITCH TARGET TEMPLATE TO UNMAP OR
+syn match   vislcg3Sub          /SUB:[0-9]/
 syn match   vislcg3Operators    /[-|+^∩∆]/
 syn match   vislcg3Operators    /[ (]\zs[*+0-9-]\+/
 syn match   vislcg3Form         /"<[^>]*>"/
-syn match   vislcg3Word         /"[^"@]"/
+syn match   vislcg3Word         /"[^"@]*"/
 
 " some fragments
 "syn match   vislcg3Id           /\i*/
 syn match   vislcg3Regex        /[ (]\/\zs[^\/]\+\ze\/[ri]\+/ contained
-syn match   vislcg3SynTags      /@[<>A-Za-z_+-]\+/
+syn match   vislcg3SynTags      /@[<>A-Za-z_+:-]\+/
 syn region  vislcg3Bracketed    start=/(/ end=/)/ contains=vislcg3KeyWords,vislcg3Form,vislcg3Word,vislcg3Regex,vislcg3Id,vislcg3Operators,vislcg3SynTags
 
 " Comments
@@ -40,6 +41,7 @@ syn match   vislcg3Comment      /#.*/ contains=vislcg3CommentNotes,vislcg3Commen
 
 " Highlights
 hi def link vislcg3KeyWords     Keyword
+hi def link vislcg3Sub          Keyword
 hi def link vislcg3Form         String
 hi def link vislcg3Word         Character
 hi def link vislcg3Regex        String
