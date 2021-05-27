@@ -5,7 +5,7 @@
 " Last Change:  2019-11-19
 " Version:      0.50
 " URL: 
-" See http://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+" See https://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
 " for more information about this dialect of lexc
 
 " Quit when a (custom) syntax file was already loaded

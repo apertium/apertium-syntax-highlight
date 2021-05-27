@@ -5,7 +5,7 @@
 " Last Change: 2014-12-14
 " Version: 0.31
  
-" See http://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+" See https://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
 " for more information about this dialect of lexc
  
 if version < 600
