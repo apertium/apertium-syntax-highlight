@@ -1,4 +1,3 @@
 # 
 
-A collection of Apertium formats related syntax highlighting plugins for different text editors.
-
+A collection of syntax highlighting plugins for different text editors supporting various Apertium formats.
