@@ -28,4 +28,4 @@ in the Vundle section.
 
 ### Manual
 
-Copy the subdirs here in the `~/.vim/`.
+Copy the subdirs here into `~/.vim/`.
